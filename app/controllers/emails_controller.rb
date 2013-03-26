@@ -1,4 +1,5 @@
 class EmailsController < ApplicationController
+  protect_from_forgery :except => :create
   skip_before_filter :verify_authenticity_token
   # GET /emails
   # GET /emails.json
