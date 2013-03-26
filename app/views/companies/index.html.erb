@@ -1,0 +1,14 @@
+<h3>Tracked Companies</h1>
+
+<% @companies.each do |company| %>
+<div class="company">
+<h3 style="float:left;"><%= link_to company.name, company %></h3>
+<span style="float:right; margin-top:10px; font-size:15px;"><%= company.email %></span>
+<p style="clear:both">
+Last Email: December big savings 50% off (12/12/2012)
+</p>
+
+</div>
+
+<% end %>
+
