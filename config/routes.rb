@@ -1,4 +1,7 @@
 Hawk::Application.routes.draw do
+  resources :emails
+
+
   resources :companies
 
   root :to => 'companies#index'
