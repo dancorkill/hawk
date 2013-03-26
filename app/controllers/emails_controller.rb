@@ -1,4 +1,5 @@
 class EmailsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   # GET /emails
   # GET /emails.json
   def index
@@ -40,7 +41,7 @@ class EmailsController < ApplicationController
   # POST /emails
   # POST /emails.json
   def create
-    @email = Email.new(params[:email])
+    @email = Email.new(params[:subject])
 
     respond_to do |format|
       if @email.save
